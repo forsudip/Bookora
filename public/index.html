@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bookora — a premium 3D digital bookstore for ebooks. Read. Learn. Evolve.">
+<meta property="og:title" content="Bookora — Read. Learn. Evolve."><meta property="og:description" content="Discover premium ebooks in a futuristic digital bookstore.">
+<title>Bookora — Read. Learn. Evolve.</title><link rel="stylesheet" href="/styles.css">
+</head><body>
+<div class="noise"></div>
+<header class="nav"><a class="logo" href="#home"><span>◈</span> BOOKORA</a><nav><a href="#home">Home</a><a href="#explore">Explore</a><a href="#categories">Categories</a><a href="#about">Why Bookora</a></nav><div class="nav-actions"><button class="icon-btn" id="searchBtn">⌕</button><button class="cart-btn" id="cartBtn">Bag <b id="cartCount">0</b></button><button class="btn small" id="authBtn">Sign in</button></div></header>
+
+<main>
+<section class="hero" id="home"><div class="hero-copy"><div class="eyebrow">THE NEXT CHAPTER OF READING</div><h1>Books that feel<br><em>alive.</em></h1><p>Explore a premium collection of ebooks designed to help you think deeper, learn faster and build better.</p><div class="hero-actions"><a class="btn" href="#explore">Explore books <span>→</span></a><button class="ghost" onclick="showToast('Your free preview is coming soon ✨')">Preview experience</button></div><div class="trust"><span>★ 4.9/5</span><span>•</span><span>10k+ readers</span><span>•</span><span>Instant access</span></div></div>
+<div class="hero-stage"><div class="orb orb1"></div><div class="orb orb2"></div><div class="book3d main-book"><div class="book-spine"></div><div class="book-cover"><small>BOOKORA ORIGINAL</small><strong>THE ART<br>OF FOCUS</strong><span>MAYA CHEN</span></div></div><div class="book3d mini-book one"><div class="book-cover"><strong>AI<br>FOR<br>EVERYONE</strong></div></div><div class="book3d mini-book two"><div class="book-cover"><strong>MONEY<br>MINDSET</strong></div></div><div class="stage-label">NEW<br><b>COLLECTION</b></div></div></section>
+
+<section class="ticker"><span>READ</span><i>✦</i><span>LEARN</span><i>✦</i><span>EVOLVE</span><i>✦</i><span>READ</span><i>✦</i><span>LEARN</span><i>✦</i><span>EVOLVE</span></section>
+
+<section class="section" id="explore"><div class="section-head"><div><div class="eyebrow">CURATED FOR YOU</div><h2>Find your next <em>obsession.</em></h2></div><div class="controls"><input id="search" placeholder="Search books..."><select id="category"><option value="">All categories</option></select><select id="sort"><option value="featured">Featured</option><option value="priceLow">Price: low to high</option><option value="priceHigh">Price: high to low</option><option value="rating">Top rated</option></select></div></div><div class="grid" id="books"></div></section>
+
+<section class="category-section" id="categories"><div class="eyebrow">EXPLORE BY MOOD</div><h2>Pick a <em>world.</em></h2><div class="category-grid" id="categoryGrid"></div></section>
+
+<section class="feature" id="about"><div class="feature-art"><div class="ring"></div><div class="floating-card"><span>01</span><b>DISCOVER</b><small>Curated digital shelves</small></div><div class="floating-card second"><span>02</span><b>OWN</b><small>Instant private library</small></div></div><div><div class="eyebrow">WHY BOOKORA</div><h2>A bookstore built for the <em>digital age.</em></h2><p>Beautiful discovery meets a frictionless buying experience. Your purchases live in one private library, ready whenever inspiration strikes.</p><div class="points"><div><b>01</b><span><strong>Instant delivery</strong> Your ebook appears immediately after checkout.</span></div><div><b>02</b><span><strong>One beautiful library</strong> Keep every purchase organized in your account.</span></div><div><b>03</b><span><strong>Secure checkout</strong> Payment architecture is ready for a production gateway.</span></div></div></div></section>
+
+<section class="newsletter"><div><div class="eyebrow">STAY IN THE LOOP</div><h2>Get the next chapter<br><em>in your inbox.</em></h2></div><form id="newsletter"><input type="email" required placeholder="you@example.com"><button class="btn">Subscribe →</button></form></section>
+</main>
+<footer><div class="logo"><span>◈</span> BOOKORA</div><p>Read. Learn. Evolve.</p><div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div></footer>
+
+<div class="modal" id="authModal"><div class="modal-card"><button class="close" data-close>×</button><div class="tabs"><button class="active" data-tab="login">Sign in</button><button data-tab="register">Create account</button></div><form id="authForm"><div id="authFields"></div><button class="btn full" id="authSubmit">Continue →</button><p class="form-note">Demo admin: admin@bookora.local / admin123</p></form></div></div>
+<div class="modal" id="cartModal"><div class="modal-card cart"><button class="close" data-close>×</button><div class="eyebrow">YOUR BAG</div><h2>Your <em>library.</em></h2><div id="cartItems"></div><div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="btn full" id="checkout">Checkout →</button></div></div>
+<div class="modal" id="adminModal"><div class="modal-card admin"><button class="close" data-close>×</button><div class="eyebrow">ADMIN CONSOLE</div><h2>Bookora <em>control room.</em></h2><div class="stats" id="stats"></div><form id="addBook"><input name="title" required placeholder="Book title"><input name="author" placeholder="Author"><input name="category" placeholder="Category"><input name="price" type="number" required placeholder="Price ₹"><input name="oldPrice" type="number" placeholder="Old price ₹"><input name="emoji" placeholder="Emoji e.g. 📘"><textarea name="description" placeholder="Description"></textarea><button class="btn">Add book</button></form><div id="adminBooks"></div></div></div>
+<div class="toast" id="toast"></div>
+<script src="/app.js"></script></body></html>
